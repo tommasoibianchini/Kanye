@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+	
+	<meta charset="utf-8">
+	<title>Il Codice Colore RGB</title>
+	<meta name="author"      content="Nome Cognome">
+	<meta name="description" content="Descrizione">
+	<meta name="viewport"    content="width=device-width, initial-scale=1">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet"   href="./assets/css/main.css">
+	<style>
+		
+		body {
+    font-size: 25px;
+	color:#a0cdd5;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	background-color: #282441;
+	
+	
+}
+
+.slider-container {
+    margin: 20px 0;
+}
+
+.slider {
+    width: 200px;
+}
+
+	</style>
+</head>
+
+<body>
+	<main class="contenitore">
+
+		<!-- --------------------------------------------------------------------- -->
+
+		<header>
+			<span></span>
+			<h1>IL CODICE COLORE RGB</h1>
+		</header>
+
+		<!-- --------------------------------------------------------------------- -->
+		
+		<section class="filetto">
+			<h4 class="titolo-sezione">Sezione 1: <br>IL COLORE IN GENERALE</h4>
+			<div class="contenuto-sezione">
+				<p>
+					Il colore è una percezione visiva che deriva dalla stimolazione dei recettori della luce nell'occhio, i coni, da parte delle lunghezze d'onda della luce riflessa o emessa dagli oggetti.<br>
+					Ogni colore è caratterizzato da una specifica lunghezza d'onda nel spettro visibile, che varia approssimativamente tra 380 nm (violetto) e 700 nm (rosso).		
+					<br>
+					
+				</p>
+				<iframe scrolling=no frameborder=0 height=210 src="./assets/sketches/ONDE/"></iframe><br><br>
+				<p>
+					I colori che l'occhio umano non può vedere corrispondono a lunghezze d'onda al di fuori dello spettro visibile,<br>
+					ovvero quelle che sono inferiori a 380 nm e superiori a 700 nm:<br><br>
+					<b>Infrarosso (IR)</b><br><br>
+
+					Lunghezza d'onda: 700 nm - 1 nm<br>
+					Descrizione: La radiazione infrarossa ha lunghezze d'onda più lunghe rispetto alla luce visibile.<br><br>
+
+					<b>Ultravioletto (UV)</b><br><br>
+
+					Lunghezza d'onda: 10 nm - 400 nm<br>
+					Descrizione: La radiazione UV ha lunghezze d'onda più corte rispetto alla luce visibile.<br>
+					L'UV è noto per causare scottature solari e può danneggiare il DNA, aumentando il rischio di cancro della pelle.<br>
+					 Viene utilizzato in applicazioni come la sterilizzazione e la fototerapia.<br>
+
+
+
+				
+				</p>
+			</div>
+		</section>
+
+		<!-- --------------------------------------------------------------------- -->
+
+		<section class="filetto">
+			<h4 class="titolo-sezione">Sezione 2:<br>IL CODICE RGB E IL CUBO RGB</h4>
+			<div class="contenuto-sezione">
+				<p>
+					Il codice RGB è un sistema di rappresentazione dei colori che si basa sulla combinazione di tre colori fondamentali:<br> 
+					Rosso (Red), Verde (Green) e Blu (Blue).<br>
+					 Ogni colore può essere mescolato in diverse intensità per creare una vasta gamma di colori visibili.<br><br> 
+					 <b>COMPOSIZIONE DEI COLORI:</b><br><br> 
+					<b>Addizione:</b> Il modello RGB è additivo, il che significa che i colori vengono creati aggiungendo intensità di luce dei tre colori primari.<br> 
+					Quando le intensità di tutti e tre i colori sono massime (255), si ottiene il bianco.<br>
+ 					Quando tutte le intensità sono a zero, si ottiene il nero.<br><br> 
+					<b>Gamma di Colori:</b> Ogni componente (R, G, B) può assumere valori interi da 0 a 255, permettendo di rappresentare 256 livelli per ciascun colore.<br> 
+					Combinando questi livelli, si ottiene una gamma di 16.777.216 colori unici (256^3).<br>
+				</p>
+				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/slider/"></iframe><br> 
+				
+				<p>
+					<b>IL CUBO RGB</b><br><br>
+					Il cubo RGB è una rappresentazione tridimensionale del modello di colore RGB, che visualizza tutti i possibili colori come punti in uno spazio 3D.<br> 
+					Ogni asse del cubo rappresenta una delle componenti di colore primarie: Rosso, Verde e Blu.<br> 
+					Questo modello aiuta a comprendere meglio come i colori si combinano e come variano in intensità.<br><br>
+					<b>STRUTTURA DEL CUBO RGB</b><br><br> 
+					<b>Assi del Cubo:</b><br><br> 
+					<b>Asse Rosso (R):</b> Va da 0 a 255 lungo uno degli assi del cubo.<br><br> 
+					<b>Asse Verde (G):</b> Va da 0 a 255 lungo il secondo asse.<br><br> 
+					<b>Asse Blu (B):</b> Va da 0 a 255 lungo il terzo asse.<br><br> 
+
+					<b>Interno del Cubo:</b><br>
+					Ogni punto all'interno del cubo rappresenta un colore specifico determinato dalle sue coordinate (R, G, B),<br> 
+					dove ogni valore varia tra 0 e 255.
+				</p>
+				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/CuboDEF/"></iframe>
+				
+			</div>
+		</section>
+
+		<!-- --------------------------------------------------------------------- -->
+
+		<section class="filetto">
+			<h4 class="titolo-sezione">Sezione 3:<br>IL DITHERING IN BREVE</h4>
+			<div class="contenuto-sezione">
+				<p>
+					Il "dither" è una tecnica utilizzata per creare l'illusione di nuovi colori e sfumature disponendo in modo strategico pixel di colori esistenti.<br> 
+					Questa tecnica è molto utile quando si hanno a disposizione solo un numero limitato di colori, come nei vecchi display a bassa risoluzione o nella stampa.<br><br> 
+					<b>Come Funziona il Dither:</b><br>
+					Immagina di avere uno schermo che può visualizzare solo i colori rosso, verde e blu, ma non il colore magenta.<br>
+					 Magenta è un colore che ottieni combinando rosso e blu.<br> 
+					Se lo schermo non può mostrare magenta direttamente, si può usare il dither per creare l'illusione del magenta.<br> 
+					Applicazioni del Dither<br> <br> 
+
+					<b>Immagini Digitali:</b> Nelle immagini a bassa risoluzione, il dither viene usato per dare l'impressione di una maggiore gamma di colori.<br> <br> 
+
+					<b>Stampa:</b> Le stampanti usano il dither per riprodurre immagini a colori utilizzando solo pochi inchiostri di base.<br> <br> 
+
+					<b>Grafica Retro:</b> I vecchi giochi per computer e console spesso usavano il dither per creare sfumature e dettagli con una tavolozza limitata di colori.<br> <br> 
+
+					In sintesi, il dither è una tecnica ingegnosa che sfrutta la nostra percezione visiva per creare l'illusione di nuovi colori e sfumature, combinando pixel di colori esistenti.<br> 
+					 Questo metodo è stato cruciale per migliorare la qualità visiva nelle tecnologie con limitazioni di colore.
+
+				</p>
+				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/MAGENTA/"></iframe><br>
+				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/CIANO/"></iframe><br>
+				<iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/GIALLO/"></iframe>
+			</div>
+		</section>
+
+		<!-- --------------------------------------------------------------------- -->
+
+		<section class="filetto">
+			<h4 class="titolo-sezione">Sezione 4:<br>PERCHÉ IL CODICE RGB NON É DEL TUTTO AFFIDABILE? CAUSE PRINCIPALI E FATTORI ESTERNI</h4>
+			<div class="contenuto-sezione">
+				<p>
+					Il codice colore RGB è un sistema molto utilizzato per rappresentare i colori tramite la combinazione di rosso, verde e blu. Tuttavia, non è corretto dire che non è “veritiero".<br>
+					La veridicità di un linguaggio di codifica dei colori dipende dall'uso che se ne fa e dalla precisione richiesta per un determinato contesto.<br>
+				    La ragione principale per cui CMYK è più adatto di RGB per la stampa è che CMYK riflette più accuratamente il processo di stampa stesso.<br> 
+				    La maggior parte delle stampanti utilizza inchiostri a base di ciano, magenta, giallo e nero (CMYK). Quando si mescolano questi inchiostri durante il processo di stampa, si possono ottenere una vasta gamma di colori, simile al modo in cui i colori sono mischiati in CMYK sul foglio.<br> 
+				    Al contrario, i monitor elettronici utilizzano la luce per creare colori, quindi usano il modello RGB.<br>
+					La gamma di colori che possono essere riprodotti su un monitor (RGB) è solitamente più ampia rispetto a quella che può essere prodotta su carta (CMYK).<br>
+					Questo significa che ci sono alcuni colori che possono essere visualizzati su uno schermo che non possono essere accuratamente riprodotti nella stampa CMYK.<br> <br> 
+				   
+					<iframe scrolling=no frameborder=0 height=500 src="./assets/img/CMYK.png"></iframe><br> 
+
+				    Per quanto riguarda la percezione umana del colore, è un argomento complesso. La percezione del colore dipende da vari fattori, tra cui:<br><br> 
+				    <b>-Luminosità:</b> La luminosità influisce sulla percezione del colore.<br> <br> 
+				    Colori simili possono apparire diversi a seconda della quantità di luce ambientale presente.<br><br> 
+				    <b>-Contrasto:</b> Il contrasto tra i colori circostanti può influenzare la percezione del colore di un oggetto.<br><br> 
+				    <b>-Saturazione:</b> La saturazione si riferisce alla purezza del colore.<br>
+					Colori più saturi possono apparire più vibranti, mentre colori meno saturi possono sembrare più smorzati.<br><br> 
+				   <b>-Adattamento Cromatico:</b> Il nostro sistema visivo si adatta ai diversi livelli di illuminazione e condizioni di luce, il che può influenzare la nostra percezione del colore nel tempo.<br><br>  
+				   
+				   <iframe scrolling=no frameborder=0 height=500 src="./assets/sketches/CORIANDOLI/"></iframe><br> 
+
+
+				</p>
+				
+
+			</div>
+		</section>
+		<section class="filetto">
+			<h4 class="titolo-sezione"><br>BIBLIOGRAFIA E FONTI</h4>
+			<p>
+				<br>  <a href="https://it.wikipedia.org/wiki/Pagina_principale" target="_blank">Wikipedia (Informazioni su RGB, onde e Dithering)</a>
+			
+				
+			
+			<br> <p></p> <a href="https://toolset.mrw.it" target="_blank">Toolset.it (Alcune funzioni html)</a>
+			</p>
+				<br> <p></p>  <a href="https://www.gianlucatramontana.it/2017/05/29/teoria-del-colore-i-modelli-rgb-cmyk-hsb-e-lab/" target="_blank">Gianlucatramontana.it (RGB,CMYK e Sintesi Additiva)</a>
+			</p>
+				<br> <p></p>  <a href="https://www.reddit.com/search/?q=html+tutorial&type=link&cId=52b4f80b-a094-44ee-941f-74552dc9709b&iId=094017dc-b66e-449f-8c5c-3188c5817a53" target="_blank">Reddit (sezione Visual Studio Code, tutorial)</a>
+			</p>
+				<br> <p></p>  <a href="https://processing.org" target="_blank">Processing (librerie e sketches)</a>
+			</p>
+			<p></p><p></p>  <a href="https://learn.microsoft.com/en-us/typography/font-list/segoe-ui" target="_blank">-Microsoft Learn (segoe UI,free font)</a> <br>
+			</p> <p></p><a href="https://editor.p5js.org" target="_blank">P5.js (Tester dei codici sketch)</a>
+
+		</section>
+
