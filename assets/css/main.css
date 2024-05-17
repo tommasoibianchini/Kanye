@@ -35,6 +35,11 @@ iframe {
 	width: 100%;
 }
 
+a {
+color: white;
+}
+
+
 header,
 section {
 	display: grid;
