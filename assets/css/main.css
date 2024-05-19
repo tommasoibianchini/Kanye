@@ -55,6 +55,20 @@ section {
 .titolo-sezione {
 	margin-right: 1em;
 }
+a:visited {
+    color: rgb(255, 125, 231); /* Colore del testo quando il link è visitato */
+}
+a:active {
+    color: #ff00e1; /* Colore del testo quando il link è attivo */
+}
+a:hover {
+  
+    transform: scale(1.1); /* Scala il link leggermente */
+}
+a {
+    color: rgb(255, 164, 240); /* Colore del link non visitato */
+ 
+}
 
 
 
