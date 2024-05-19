@@ -17,7 +17,7 @@ function draw() {
       noStroke();
   }
 
-  fill(160,205,213);
+  fill(189,226,187);
   textAlign(CENTER);
   textSize(16);
   //text("Spettro Visibile: Lunghezze d'Onda in nm", width / 2, height - 20);
