@@ -54,7 +54,7 @@ function createCubes() {
 }
 
 function draw() {
-  background(40,36,65);
+  background(23,23,23);
   orbitControl();
   cam.setPosition(0, 0, camSlider.value()); 
   cam.lookAt(0, 0, 0); 
