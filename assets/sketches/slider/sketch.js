@@ -17,23 +17,23 @@ function setup() {
 
     // Crea le etichette per gli slider
     rLabel = createDiv('R');
-    rLabel.style('color', '#a0cdd6');
+    rLabel.style('color', '#bde2bb');
     rLabel.style('font-size', '16px');
     rLabel.position(rSlider.x + rSlider.width + 10, 20);
 
     gLabel = createDiv('G');
-    gLabel.style('color', '#a0cdd6');
+    gLabel.style('color', '#bde2bb');
     gLabel.style('font-size', '16px');
     gLabel.position(gSlider.x + gSlider.width + 10, 50);
 
     bLabel = createDiv('B');
-    bLabel.style('color', '#a0cdd6');
+    bLabel.style('color', '#bde2bb');
     bLabel.style('font-size', '16px');
     bLabel.position(bSlider.x + bSlider.width + 10, 80);
 
     // Crea un elemento HTML per visualizzare i valori RGB
     rgbText = createDiv('');
-    rgbText.style('color', '#a0cdd6');
+    rgbText.style('color', '#bde2bb');
     rgbText.style('font-size', '30px');
     rgbText.position(width / 2 - 250, height / 2 + 130);  // Posizionare sotto il quadrato
 }
