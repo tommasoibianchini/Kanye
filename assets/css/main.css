@@ -52,6 +52,7 @@ section {
 .titolo-sezione {
 	margin-right: 1em;
 }
+
 a:visited {
     color: rgb(255, 125, 231); /* Colore del testo quando il link è visitato */
 }
