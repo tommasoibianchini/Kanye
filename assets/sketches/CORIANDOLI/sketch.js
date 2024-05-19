@@ -48,7 +48,7 @@ function drawBlackRect() {
 }
 
 function drawButton() {
-    fill('#a0cdd5');
+    fill('#bde2bb');
     rect(buttonX, buttonY, buttonWidth, buttonHeight, 10);
     fill('#000');
     textSize(32);
