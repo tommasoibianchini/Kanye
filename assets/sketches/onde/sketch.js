@@ -4,7 +4,7 @@ function setup() {
 }
 
 function draw() {
-  background(40,36,65);
+  background(23,23,23);
   let startX = 50;
   let endX = width - 50;
   let spectrumLength = endX - startX;
