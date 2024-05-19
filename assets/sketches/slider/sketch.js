@@ -39,7 +39,7 @@ function setup() {
 }
 
 function draw() {
-    background(40, 36, 65);
+    background(23,23,23);
     
     // Aggiorna i valori RGB dagli slider
     r = rSlider.value();
