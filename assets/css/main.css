@@ -3,25 +3,22 @@
 }
 
 body {
-	
-	padding: 2em;
+	background-color: rgb(0, 0, 0); /* white, #FFFFFF */
+	padding: 5em;
 	margin: 0;
-	font-family: "Inter", sans-serif;
-	font-optical-sizing: auto;
-	font-weight: 400;
-	font-style: normal;
-	font-variation-settings: "slnt" 0;
-	cursor: url('./assets/img/cursor.png'), auto;
+	color: white;
+
 }
 
 p {
-	margin: 0 0 1em 0;
-	max-width: 30em;
+	margin: 0 0 1em 0; /*Larghezza*/
+	max-width: 50em;
 }
 
 h1 {
+	color: rgb(255, 230, 40);
 	margin: 0;
-	font-size: 3em;
+	font-size: 6em;
 }
 
 h4 {
@@ -32,13 +29,11 @@ iframe {
 	margin: 0;
 	display: block;
 	border: none;
-	width: 100%;
 }
-
-
 
 header,
 section {
+	color: rgb(255, 230, 40);
 	display: grid;
 	grid-template-columns: 1fr 4fr;
 	margin-bottom: 2em;
@@ -46,45 +41,80 @@ section {
 }
 
 .filetto {
-	border-top: solid 1px #bde2bb;
+	color: rgb(255, 230, 40);
+	border-top: solid 1px 
 }
 
 .titolo-sezione {
+	color: rgb(255, 230, 40);
 	margin-right: 1em;
 }
 
-a:visited {
-    color: rgb(255, 125, 231); /* Colore del testo quando il link è visitato */
+.contenitore {
+	max-width: 1000em;
 }
-a:active {
-    color: #ff00e1; /* Colore del testo quando il link è attivo */
-}
-a:hover {
-  
-    transform: scale(1.1); /* Scala il link leggermente */
-}
-a {
-    color: rgb(255, 164, 240); /* Colore del link non visitato */
- 
-}
-
-
-
 
 ul {
 	margin: 0;
 	padding: 0;
 }
 
-/* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
+.text-left {
+	color: rgb(255, 230, 40);
+	text-align: left;
+	width: 100%; /* Larghezza del testo a sinistra */
+	padding-right: 100px; /* Distanza dal testo a destra */
+}
 
+.text-right {
+	color: rgb(255, 230, 40);
+	text-align: left;
+	width: 100%; /* Larghezza del testo a destra */
+	padding-left: 450px; /* Distanza dal testo a sinistra */
+}
+
+.black-text {
+	font-size: 12px;
+	color: rgb(255, 233, 33);
+}
+
+.white-footer {
+	width:100%;
+	background-color: rgb(176, 31, 48);
+	padding: 20px; 
+	margin-top: 0; 
+	text-align: center;
+}
+
+.column {
+	float: left;
+	width: 33.33%;
+	padding: 0 15px;
+	box-sizing: border-box;
+	text-align: left; 
+}
+
+.column h3 {
+	margin-top: 0;
+	color: rgb(176, 31, 48)
+}
+
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+/* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
 @media only screen and (max-width: 600px) {
 	header,
 	section {
 		grid-template-columns: 1fr;
 	}
 	.contenitore {
-		width:100%;
+		width: 100%;
+		color: rgb(176, 31, 48)
 	}
 	.contenuto-sezione {
 		width: 100%;

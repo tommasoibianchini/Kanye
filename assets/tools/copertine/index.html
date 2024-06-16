@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Carousel</title>
+    <style>
+        body {
+            background-color: rgb(205, 36, 57); /* Sfondo rosso per il canvas */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #container {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            padding: 20px;
+        }
+        #image-container {
+            background-color: rgb(255, 234, 6);
+            padding: 10px;
+        }
+        #carousel-image {
+            width: 600px;
+            transition: opacity 0.5s ease-in-out;
+            cursor: pointer; /* Cambia il cursore in un puntatore per indicare che l'immagine è cliccabile */
+        }
+        #text-container {
+            background-color: rgb(205, 36, 57);
+            padding: 20px;
+            margin-left: 20px;
+            flex: 1;
+            color: yellow; /* Testo giallo */
+        }
+        #text-container p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="image-container">
+            <img id="carousel-image" src="image1.jpg" alt="Image Carousel">
+        </div>
+        <div id="text-container">
+            <p>Questa ballerina carina ma leggermente ispirata a Black Swan è una delle cinque copertine intercambiabili che accompagnano l'album. Dopo che Kanye scelse Condo per realizzare la copertina dell'album, visitò il suo studio diverse volte per discutere delle possibili opere. Durante una sessione, stavano ascoltando la canzone "Runaway" quando la moglie di Condo, Anna, mostrò a Kanye una clip in slow motion della ballerina francese Sylvie Guillem che danzava. Questa immagine rimase impressa nella mente di West e lui disse semplicemente: "Ehi, amico, mi piacerebbe avere un grande dipinto di una ballerina". Pensai a una ballerina che brindava. Sai, 'brindiamo agli str...zi.' E il resto è storia.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const images = [
+                'image1.jpg',
+                'image2.jpg',
+                'image3.jpg',
+                'image4.jpg',
+                'image5.jpg'
+            ];
+            const texts = [
+                'Questa ballerina è una delle cinque copertine intercambiabili che accompagnano l\'album. Dopo che Kanye scelse Condo per realizzare la copertina dell\'album, visitò il suo studio diverse volte per discutere delle possibili opere. Durante una sessione, stavano ascoltando la canzone "Runaway" quando la moglie di Condo, Anna, mostrò a Kanye una clip in slow motion della ballerina francese Sylvie Guillem che danzava. Questa immagine rimase impressa nella mente di West e lui disse semplicemente: "Ehi, amico, mi piacerebbe avere un grande dipinto di una ballerina, brindiamo agli str...zi." E il resto è storia.',
+                'Possiamo trovare l\'esplicazione per questo dipinto in una citazione diretta di Kanye stesso: "Sono Warhol. Sono l\'artista più impattante della nostra generazione. Sono Shakespeare in carne e ossa. Walt Disney. Nike. Google. Ora chi sarà la famiglia Medici e mi finanzierà per permettermi di creare di più? O volete emarginarmi fino a che non sarò fuori dal mio momento?" Sappiamo tutti che Kanye ha un\'alta opinione di sé stesso, ma questo va oltre quello che avevamo mai immaginato. Egli crede di essere "Shakespeare in carne e ossa", il che è la spiegazione per questo dipinto ispirato a Re Lear. Ma invece di morire e vedere morire tutta la sua famiglia, "la sua tragedia fu una sorta di esilio che Kanye impose a se stesso".',
+                'Questa copertina è profondamente in sintonia con lo stile di Condo di "cubismo psicologico". È una rappresentazione dei molti Kanye diversi che esistono dentro Kanye stesso. È il complesso di Dio in lui, il rapper, il produttore, l\'artista, il designer di moda, il marito di Kim K e il padre di North e Saint, tutti in un\'unica immagine estremamente disturbante. Ma guardare questo lavoro è probabilmente ciò che si prova ad essere nella stessa stanza con l\'uomo- spaventoso, inquietante, scioccante, ma soprattutto incredibilmente affascinante.',
+                'Come puoi vedere, questa è semplicemente la copertina sopra senza la parte della testa decapitata. Forse è un\'allusione alla convinzione di Kanye di essere invincibile e forse anche immortale? Non siamo sicuri dei dettagli specifici, ma possiamo dirti senza alcun dubbio che ha qualcosa a che fare con l\'ego smisurato di Kanye... ma questo è solo perché tutto ciò che Kanye fa ha a che fare con il suo ego smisurato.',
+                'Secondo Condo: "Lei è una specie di frammento, tra una sfinge, una fenice e un fantasma che ossessiona, un\'arpia." E poi Kanye si trova anche in una sorta di strana sala bruciata degli anni \'70 di un club blues di Chicago, bevendo una birra. "Possiamo tutti essere d\'accordo sul fatto che questa è probabilmente un po\' troppo per una copertina, ma chi siamo noi per giudicare? La risposta è Walmart, iTunes, Spotify e alla fine l\'intero Stati Uniti, dato che è stata vietata in ognuno di quei posti.'
+            ];
+            let currentIndex = 0;
+
+            const carouselImage = document.getElementById('carousel-image');
+            const textContainer = document.getElementById('text-container');
+
+            carouselImage.addEventListener('click', () => {
+                // Inizia la transizione opaca
+                carouselImage.style.opacity = 0;
+
+                // Cambia l'immagine e il testo dopo il tempo della transizione
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    carouselImage.src = images[currentIndex];
+                    textContainer.innerHTML = '<p>' + texts[currentIndex] + '</p>';
+                    carouselImage.style.opacity = 1; // Ripristina l'opacità dopo il cambio di immagine
+                }, 500); // Il tempo deve corrispondere alla durata della transizione CSS
+            });
+        });
+    </script>
+</body>
+</html>

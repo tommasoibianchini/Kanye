@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery with Random Images</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-color: rgb(205, 36, 57);
+    }
+
+    .gallery {
+      display: flex;
+    }
+
+    .image-container {
+      margin-right: 20px;
+      position: relative; /* Per posizionare correttamente l'ombra */
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 0px; /* Bordi arrotondati per l'ombra */
+      box-shadow: 0 0 0 4px rgb(255, 217, 0); /* Ombra dorata */
+    }
+  </style>
+</head>
+<body>
+  <div class="gallery">
+    <div class="image-container">
+      <img id="image1" src="" alt="Image 1">
+    </div>
+    <div class="image-container">
+      <img id="image2" src="" alt="Image 2">
+    </div>
+    <div class="image-container">
+      <img id="image3" src="" alt="Image 3">
+    </div>
+    <div class="image-container">
+      <img id="image4" src="" alt="Image 4">
+    </div>
+  </div>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = ['image1', 'image2', 'image3', 'image4'];
+      const imageCount = 15; // Number of images in the 'images' folder
+      
+      function getRandomImage() {
+        const randomIndex = Math.floor(Math.random() * imageCount) + 1;
+        return `images/image${randomIndex}.jpg?t=${Date.now()}`; // Aggiunge un parametro di query per evitare la cache
+      }
+      
+      function updateImages() {
+        images.forEach(id => {
+          const imgElement = document.getElementById(id);
+          imgElement.src = getRandomImage();
+        });
+      }
+      
+      updateImages(); // Initialize images on page load
+      
+      setInterval(updateImages, 1500); // Update images every 500 milliseconds
+    });
+  </script>
+</body>
+</html>

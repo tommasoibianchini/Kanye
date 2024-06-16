@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Images</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: rgb(205, 36, 57);
+        }
+        .image-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        .image-container img {
+            width: 600px;
+            height: auto;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img id="image1" src="" alt="Random Image 1">
+        <img id="image2" src="" alt="Random Image 2">
+    </div>
+
+    <script>
+        function getRandomImage() {
+            const images = [
+                'image1.jpg',
+                'image2.jpg',
+                'image3.jpg',
+                'image4.jpg',
+                'image5.jpg'
+            ];
+            const randomIndex = Math.floor(Math.random() * images.length);
+            return images[randomIndex];
+        }
+
+        function displayRandomImages() {
+            let image1 = getRandomImage();
+            let image2 = getRandomImage();
+
+            // Ensure the two images are different
+            while (image1 === image2) {
+                image2 = getRandomImage();
+            }
+
+            document.getElementById('image1').src = image1;
+            document.getElementById('image2').src = image2;
+        }
+
+        // Display random images on page load and change every second
+        displayRandomImages();
+        setInterval(displayRandomImages, 500);
+    </script>
+</body>
+</html>

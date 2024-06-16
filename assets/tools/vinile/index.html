@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Toggle Images Loop</title>
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .image {
+    width: 300px;
+    height: auto;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <img id="mainImage" class="image" src="2.jpg" alt="Image 1">
+</div>
+
+<script>
+  let clickCount = 0;
+  let image2 = null;
+  let image3 = null;
+
+  function toggleImage() {
+    clickCount++;
+
+    if (clickCount === 1) {
+      // Primo clic: aggiungi immagine 2 a sinistra
+      image2 = new Image();
+      image2.className = 'image';
+      image2.src = '3.jpg';
+      image2.alt = 'Image 2';
+     
+      document.querySelector('.container').insertBefore(image2, document.getElementById('mainImage'));
+    } else if (clickCount === 2) {
+      // Secondo clic: aggiungi immagine 3 a destra
+      image3 = new Image();
+      image3.className = 'image';
+      image3.src = '1.jpg';
+      image3.alt = 'Image 3';
+      
+      document.querySelector('.container').appendChild(image3);
+    } else if (clickCount === 3) {
+      // Terzo clic: rimuovi immagini e resetta
+      if (image2) {
+        image2.remove();
+        image2 = null;
+      }
+      if (image3) {
+        image3.remove();
+        image3 = null;
+      }
+      clickCount = 0; // Resetta il contatore per ripartire il loop
+    }
+  }
+
+  // Aggiungi evento al clic dell'immagine principale
+  document.getElementById('mainImage').addEventListener('click', toggleImage);
+</script>
+
+</body>
+</html>
