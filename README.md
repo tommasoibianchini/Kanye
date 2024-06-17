@@ -1,12 +1,10 @@
-# DitherU
+# MBDTF
 
-Tommaso Aulopi & Giacomo Pisani
+Tommaso Bianchini
 
-Progetto e presentazione sul tema del Dithering
+Progetto e presentazione dell'artefatto personale
 
 ISIA URBINO
-
-Matematica per il design 
 
 2023-2024
 
