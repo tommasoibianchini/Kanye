@@ -102,6 +102,20 @@ ul {
 	display: table;
 	clear: both;
 }
+a:visited {
+    color: #e9d92e; /* Colore del testo quando il link è visitato */
+}
+a:active {
+    color: ##e9d92e; /* Colore del testo quando il link è attivo */
+}
+a:hover {
+  
+    transform: scale(1.1); /* Scala il link leggermente */
+}
+a {
+    color: #e9d92e; /* Colore del link non visitato */
+ 
+}
 
 /* -- breakpoint: schermi piccoli, larghezza massima 500 pixel -- */
 @media only screen and (max-width: 600px) {
